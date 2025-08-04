@@ -42,7 +42,7 @@ For detailed documentation, please refer to:
 - [英文文档](README_EN.md)
 - [中文文档](README_CN.md)
 
-5. 独立评估脚本
+1. 独立评估脚本
 - 项目中包含一个独立的评估脚本 `evaluate.py`，可以从MLflow加载训练好的模型并进行评估。
 - 使用方法：
   ```bash
