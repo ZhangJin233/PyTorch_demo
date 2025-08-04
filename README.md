@@ -1,14 +1,46 @@
 # PyTorch_demo
 
-1. 环4. 实验与分析
-- 在项目目录下运行 mlflow ui。
-- 现在，你的脚本已经准备好了。保持你的 mlflow ui 窗口开着，然后打开一个新的终端（确保进入了正确的虚拟环境和项目目录），开始你的"参数测试".
-- 进行对比实验：修改超参数（例如，尝试不同的学习率 0.01, 0.001），多次运行你的脚本。![alt text](image-1.png)
-- 在MLflow UI中分析：
-    - 对比不同"Run"的参数和最终指标，找出效果最好的那次实验。
-    - 点击进入某次"Run"的详情页，查看Metrics随时间变化的图表。
-    - 在"Artifacts"中，直接预览你保存的混淆矩阵图和分类报告。
-- 核心体验：感受MLflow如何让你的每次模型"测试"都变得有据可查、可追溯、可对比。
+[English](README_EN.md) | [中文](README_CN.md)
+
+## About This Project | 关于本项目
+
+This project demonstrates how to use PyTorch with MLflow for model training, tracking, and evaluation.
+
+这个项目演示了如何使用 PyTorch 和 MLflow 进行模型训练、跟踪和评估。
+
+## Quick Start | 快速开始
+
+```bash
+# Install dependencies | 安装依赖
+pip install -r requirements.txt
+
+# Train model | 训练模型
+python pytorch_demo.py
+
+# View experiments | 查看实验
+mlflow ui
+
+# Evaluate model | 评估模型
+python evaluate.py --run-id <RUN_ID> --log-mlflow
+```
+
+## Project Structure | 项目结构
+
+- `pytorch_demo.py`: Main training script with MLflow integration | 集成了MLflow的主训练脚本
+- `evaluate.py`: Independent evaluation script | 独立的评估脚本
+- `requirements.txt`: Project dependencies | 项目依赖
+- `README_EN.md`: Detailed English documentation | 详细的英文文档
+- `README_CN.md`: Detailed Chinese documentation | 详细的中文文档
+
+## Documentation | 文档
+
+For detailed documentation, please refer to:
+- [English Documentation](README_EN.md)
+- [中文文档](README_CN.md)
+
+详细文档请参考：
+- [英文文档](README_EN.md)
+- [中文文档](README_CN.md)
 
 5. 独立评估脚本
 - 项目中包含一个独立的评估脚本 `evaluate.py`，可以从MLflow加载训练好的模型并进行评估。
